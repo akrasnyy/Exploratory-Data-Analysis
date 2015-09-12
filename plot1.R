@@ -7,8 +7,6 @@ full_dataset <- read.table(file.path(pathref, "household_power_consumption.txt")
 ## Convert date 
 full_dataset$Date <- as.Date(full_dataset$Date, format="%d/%m/%Y")
 
-## full_dataset$Time <-  strptime(full_dataset$Time, format="%T")
-## full_dataset$Time <-  strptime(full_dataset$Time, format="%H:%M:%S")
 
 ## Subseting data
 sub_data <- subset(full_dataset, subset=(Date >= "2007-02-01" & Date <= "2007-02-02"))
